@@ -16,38 +16,38 @@ namespace proyectoFinal2019Wpf.ModelView
         private DataContext db = new DataContext();
         private ObservableCollection<Proveedor> _Proveedores;
         private ProveedorViewModel _Instancia;
-        private Boolean _IsReadOnlyNit = true;
-        private Boolean _IsReadOnlyRazonSocial = true;
-        private Boolean _IsReadOnlyDireccion = true;
-        private Boolean _IsReadOnlyPaginaWeb = true;
-        private Boolean _IsReadOnlyContactoPrincipal = true;
+        private bool _IsReadOnlyNit = true;
+        private bool _IsReadOnlyRazonSocial = true;
+        private bool _IsReadOnlyDireccion = true;
+        private bool _IsReadOnlyPaginaWeb = true;
+        private bool _IsReadOnlyContactoPrincipal = true;
         private string _Nit;
         private string _RazonSocial;
         private string _Direccion;
         private string _PaginaWeb;
         private string _ContactoPrincipal;
 
-        public Boolean IsReadOnlyNit
+        public bool IsReadOnlyNit
         {
             get { return this._IsReadOnlyNit; }
             set { this._IsReadOnlyNit = value; ChangeNotify(" IsReadOnlyNit"); }
         }
-        public Boolean IsReadOnlyRazonSocial
+        public bool IsReadOnlyRazonSocial
         {
             get { return this._IsReadOnlyRazonSocial; }
             set { this._IsReadOnlyRazonSocial = value; ChangeNotify(" IsReadOnlyRazonSocial"); }
         }
-        public Boolean IsReadOnlyDireccion
+        public bool IsReadOnlyDireccion
         {
             get { return this._IsReadOnlyDireccion; }
             set { this._IsReadOnlyDireccion = value; ChangeNotify(" IsReadOnlyDireccion"); }
         }
-        public Boolean IsReadOnlyPaginaWeb
+        public bool IsReadOnlyPaginaWeb
         {
             get { return this._IsReadOnlyPaginaWeb; }
             set { this._IsReadOnlyPaginaWeb = value; ChangeNotify(" IsReadOnlyPaginaWeb"); }
         }
-        public Boolean IsReadOnlyContactoPrincipal
+        public bool IsReadOnlyContactoPrincipal
         {
             get { return this._IsReadOnlyContactoPrincipal; }
             set { this._IsReadOnlyContactoPrincipal = value; ChangeNotify(" IsReadOnlyContactoPrincipal"); }

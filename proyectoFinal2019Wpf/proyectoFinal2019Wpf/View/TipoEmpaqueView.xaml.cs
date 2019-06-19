@@ -23,7 +23,7 @@ namespace proyectoFinal2019Wpf.View
         public TipoEmpaqueView()
         {
             InitializeComponent();
-            this.DataContext = new CategoriaViewModel();
+            this.DataContext = new TipoEmpaqueViewModel();
         }
     }
 }

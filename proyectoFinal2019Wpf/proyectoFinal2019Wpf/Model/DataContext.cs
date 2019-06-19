@@ -8,10 +8,10 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace proyectoFinal2019Wpf.Model
 {
-    public  class DataContext: DbContext
+    public class DataContext: DbContext
     {
 
-        public DbSet<TipoEmpaque> Categorias { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<TipoEmpaque> TipoEmpaques { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
@@ -32,10 +32,10 @@ namespace proyectoFinal2019Wpf.Model
           
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             //Categoria 
-            modelBuilder.Entity<TipoEmpaque>()
+            modelBuilder.Entity<Categoria>()
                 .ToTable("Categoria")
                 .HasKey(c => new { c.CodigoCategoria });
-            modelBuilder.Entity<TipoEmpaque>()
+            modelBuilder.Entity<Categoria>()
                 .ToTable("Categoria")
                 .Property(c => c.Descripcion)
                 .IsRequired()

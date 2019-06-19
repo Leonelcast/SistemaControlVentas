@@ -25,8 +25,8 @@ namespace proyectoFinal2019Wpf
         {
             InitializeComponent();
             new ClienteView().Show();
-            new CategoriaView().Show();
             new ProveedorView().Show();
+            new CategoriaView().Show();
             new TipoEmpaqueView().Show();
         }
     }
