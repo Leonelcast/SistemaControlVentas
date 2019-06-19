@@ -27,6 +27,8 @@ namespace proyectoFinal2019Wpf.ModelView
         private bool _IsReadOnlyDPI = false;
         private bool _IsReadOnlyNombre = false;
         private bool _IsReadOnlyDireccion = false;
+        private bool _IsReadOnlyNit = false;
+        private string _Nit;
         private string _DPI;
         private string _Nombre;
         private string _Direccion;
@@ -49,6 +51,7 @@ namespace proyectoFinal2019Wpf.ModelView
                 if(value!= null)
                 {
                     this._SelectCliente = value;
+                    this.Nit = value.Nit;
                     this.DPI = value.DPI;
                     this.Nombre = value.Nombre;
                     this.Direccion = value.Direccion;
@@ -127,6 +130,16 @@ namespace proyectoFinal2019Wpf.ModelView
             this.Instancia = this;
             this.Titulo = "Clientes: ";
         }
+        public string Nit
+        {
+            get { return this._Nit; }
+            set { this._Nit = value; ChangeNotify("Nit"); }
+        }
+        public bool IsReadOnlyNit
+        {
+            get { return this._IsReadOnlyNit; }
+            set { this._IsReadOnlyNit = value; ChangeNotify("IsReadOnlyNit"); }
+        }
 
         public string Titulo { get; set; }
 
@@ -169,6 +182,7 @@ namespace proyectoFinal2019Wpf.ModelView
         {
             if (parameter.Equals("Add"))
             {
+                this.IsReadOnlyNit = false;
                 this.IsReadOnlyDireccion = true;
                 this.IsreadOnlyNombre = true;
                 this.IsReadOnlyDPI = true;
@@ -192,6 +206,7 @@ namespace proyectoFinal2019Wpf.ModelView
                 {
                     case ACCION.NUEVO:
                     Cliente nuevo = new Cliente();
+                    nuevo.Nit = this.Nit;
                     nuevo.Direccion = this.Direccion;
                     nuevo.DPI = this.DPI;
                     nuevo.Nombre = this.Nombre;
@@ -205,6 +220,7 @@ namespace proyectoFinal2019Wpf.ModelView
                         {
                             int posicion = this.Clientes.IndexOf(this.SelectCliente);
                             var updateCliente = this.db.Clientes.Find(this.SelectCliente.Nit);
+                            updateCliente.Nit = this.Nit;
                             updateCliente.DPI = this.DPI;
                             updateCliente.Direccion = this.Direccion;
                             updateCliente.Nombre = this.Nombre;
@@ -228,6 +244,7 @@ namespace proyectoFinal2019Wpf.ModelView
             else if (parameter.Equals("Update"))
             {
                 this.accion = ACCION.ACTUALIZAR;
+                this.IsReadOnlyNit = false;
                 this.IsReadOnlyDPI = false;
                 this.IsReadOnlyDireccion = false;
                 this.IsreadOnlyNombre = false;
@@ -272,6 +289,7 @@ namespace proyectoFinal2019Wpf.ModelView
                 this.IsEnabledUpdate = true;
                 this.IsEnabledSave = false;
                 this.IsEnabledCancel = false;
+                this.IsReadOnlyNit = true;
                 this.IsReadOnlyDPI = true;
                 this.IsReadOnlyDireccion = true;
                 this.IsreadOnlyNombre = true;

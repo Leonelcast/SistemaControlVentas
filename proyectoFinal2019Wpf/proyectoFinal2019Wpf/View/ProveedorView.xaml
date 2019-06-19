@@ -5,12 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyectoFinal2019Wpf.View"
         mc:Ignorable="d"
-        Title="ProveedorView" Height="450" Width="800">
+           Title="{Binding Titulo}" Height="600" Width="600">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+
         </Grid.RowDefinitions>
-        <Label Content="{Binding Titulo}" Grid.Row="0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Nit" Grid.Row="0" Grid.Column="0"/>
+        <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyNit}" Text="{Binding Nit}"/>
+        <Label Content="Razon Social" Grid.Row="1" Grid.Column=" 0"/>
+        <TextBox Grid.Row="1" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyRazonSocial}" Text="{Binding RazonSocial}"/>
+        <Label Content="Direccion" Grid.Row="2" Grid.Column="0"/>
+        <TextBox Grid.Row="2" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyDireccion}" Text="{Binding Direccion}"/>
+        <Label Content="Pagina Web" Grid.Row="3" Grid.Column="0"/>
+        <TextBox Grid.Row="3" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyPaginaWeb}" Text="{Binding PaginaWeb}"/>
+        <Label Content="Contacto Principal" Grid.Row="4" Grid.Column="0"/>
+        <TextBox Grid.Row="4" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyContactoPrincipal}" Text="{Binding ContactoPrincipal}"/>
+
+        <DataGrid SelectedItem="{Binding SelectProveedor}" ItemsSource="{Binding Proveedores}" Grid.Row="5" Grid.ColumnSpan ="2">
+        </DataGrid>
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button IsEnabled="{Binding IsEnabledAdd}" Content="Add" Command="{Binding Instancia}" CommandParameter="Add"/>
+            <Button IsEnabled="{Binding IsEnabledDelete}" Content="Delete" Command="{Binding Instancia}" CommandParameter="Delete"/>
+            <Button IsEnabled="{Binding IsEnabledUpdate}" Content="Update" Command="{Binding Instancia}" CommandParameter="Update"/>
+            <Button IsEnabled="{Binding IsEnabledSave}" Content="Save" Command="{Binding Instancia}" CommandParameter="Save"/>
+            <Button IsEnabled="{Binding IsEnabledCancel}" Content="Cancel" Command="{Binding Instancia}" CommandParameter="Cancel"/>
+
+        </StackPanel>
 
     </Grid>
 </Window>
