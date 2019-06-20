@@ -1,4 +1,5 @@
-﻿using proyectoFinal2019Wpf.ModelView;
+﻿using MahApps.Metro.Controls;
+using proyectoFinal2019Wpf.ModelView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace proyectoFinal2019Wpf.View
     /// <summary>
     /// Interaction logic for TipoEmpaqueView.xaml
     /// </summary>
-    public partial class TipoEmpaqueView : Window
+    public partial class TipoEmpaqueView : MetroWindow
     {
         public TipoEmpaqueView()
         {

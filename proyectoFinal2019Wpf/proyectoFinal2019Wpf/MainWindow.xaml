@@ -1,4 +1,6 @@
-﻿<Window x:Class="proyectoFinal2019Wpf.MainWindow"
+﻿<Controls:MetroWindow 
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        x:Class="proyectoFinal2019Wpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +8,25 @@
         xmlns:local="clr-namespace:proyectoFinal2019Wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="Categoria" />
+            <Button Content="Cliente" />
+            <Button Content="Proveedor" />
+            <Button Content="Tipo Empaque" />
+            <Button>
+                
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="Login" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
     <Grid>
         
+        
     </Grid>
-</Window>
+</Controls:MetroWindow>

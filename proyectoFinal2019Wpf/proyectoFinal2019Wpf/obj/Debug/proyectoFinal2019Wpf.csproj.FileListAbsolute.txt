@@ -32,3 +32,4 @@ C:\Users\leone\OneDrive\Documentos\vs2019Fullstack\Proyecto2019\proyectoFinal201
 C:\Users\leone\OneDrive\Documentos\vs2019Fullstack\Proyecto2019\proyectoFinal2019Wpf\proyectoFinal2019Wpf\bin\Debug\ControlzEx.pdb
 C:\Users\leone\OneDrive\Documentos\vs2019Fullstack\Proyecto2019\proyectoFinal2019Wpf\proyectoFinal2019Wpf\bin\Debug\MahApps.Metro.pdb
 C:\Users\leone\OneDrive\Documentos\vs2019Fullstack\Proyecto2019\proyectoFinal2019Wpf\proyectoFinal2019Wpf\bin\Debug\MahApps.Metro.xml
+C:\Users\leone\OneDrive\Documentos\vs2019Fullstack\Proyecto2019\proyectoFinal2019Wpf\proyectoFinal2019Wpf\obj\Debug\App.baml

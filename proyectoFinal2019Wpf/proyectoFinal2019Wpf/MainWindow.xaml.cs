@@ -1,4 +1,5 @@
-﻿using proyectoFinal2019Wpf.View;
+﻿using MahApps.Metro.Controls;
+using proyectoFinal2019Wpf.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace proyectoFinal2019Wpf
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {

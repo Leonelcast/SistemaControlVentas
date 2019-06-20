@@ -1,16 +1,18 @@
-﻿<Window x:Class="proyectoFinal2019Wpf.View.TipoEmpaqueView"
+﻿<Controls:MetroWindow
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        x:Class="proyectoFinal2019Wpf.View.TipoEmpaqueView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyectoFinal2019Wpf.View"
         mc:Ignorable="d"
-       Title="{Binding Titulo}" Height="400" Width="600">
+       Title="{Binding Titulo}" Height="400" Width="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
        
 
         </Grid.RowDefinitions>
@@ -23,7 +25,7 @@
 
         <DataGrid SelectedItem="{Binding SelectTipoEmpaque}" ItemsSource="{Binding TipoEmpaques}" Grid.Row="1" Grid.ColumnSpan ="2">
         </DataGrid>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+        <StackPanel Height="Auto" Width="Auto" Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Button IsEnabled="{Binding IsEnabledAdd}" Content="Add" Command="{Binding Instancia}" CommandParameter="Add"/>
             <Button IsEnabled="{Binding IsEnabledDelete}" Content="Delete" Command="{Binding Instancia}" CommandParameter="Delete"/>
             <Button IsEnabled="{Binding IsEnabledUpdate}" Content="Update" Command="{Binding Instancia}" CommandParameter="Update"/>
@@ -32,4 +34,4 @@
         </StackPanel>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

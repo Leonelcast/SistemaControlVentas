@@ -1,4 +1,5 @@
-﻿using proyectoFinal2019Wpf.ModelView;
+﻿using MahApps.Metro.Controls;
+using proyectoFinal2019Wpf.ModelView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace proyectoFinal2019Wpf.View
     /// <summary>
     /// Interaction logic for ProveedorView.xaml
     /// </summary>
-    public partial class ProveedorView : Window
+    public partial class ProveedorView : MetroWindow
     {
         public ProveedorView()
         {

@@ -29,7 +29,7 @@ namespace proyectoFinal2019Wpf.ModelView
         private Categoria _SelectCategoria;
 
         #endregion
-        public Categoria SelectCateforia
+        public Categoria SelectCategoria
         {
             get { return this._SelectCategoria; }
             set
@@ -160,8 +160,8 @@ namespace proyectoFinal2019Wpf.ModelView
                     case ACCION.ACTUALIZAR:
                         try
                         {
-                            int position = this.Categorias.IndexOf(this.SelectCateforia);
-                            var updateCategoria = this.db.Categorias.Find(this.SelectCateforia.CodigoCategoria);
+                            int position = this.Categorias.IndexOf(this.SelectCategoria);
+                            var updateCategoria = this.db.Categorias.Find(this.SelectCategoria.CodigoCategoria);
                             updateCategoria.Descripcion = this.Descripcion;
                             this.db.Entry(updateCategoria).State = EntityState.Modified;
                             this.db.SaveChanges();
@@ -189,7 +189,7 @@ namespace proyectoFinal2019Wpf.ModelView
                 }
             else if (parameter.Equals("Delete"))
             {
-                if(this.SelectCateforia != null)
+                if(this.SelectCategoria != null)
                 {
 
                     var respuesta = MessageBox.Show("Esta seguro de eliminar el registro?", "Elminimar", MessageBoxButton.YesNo);
@@ -197,9 +197,9 @@ namespace proyectoFinal2019Wpf.ModelView
                     {
                         try
                         {
-                            db.Categorias.Remove(this.SelectCateforia);
+                            db.Categorias.Remove(this.SelectCategoria);
                             db.SaveChanges();
-                            this.Categorias.Remove(this.SelectCateforia);
+                            this.Categorias.Remove(this.SelectCategoria);
                         }
                         catch(Exception e)
                         {
