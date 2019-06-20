@@ -7,7 +7,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyectoFinal2019Wpf.View"
         mc:Ignorable="d"
-         Title="{Binding Titulo}" Height="500" Width="600">
+         Title="{Binding Titulo}" Height="500" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,14 +22,14 @@
         <Label Content="Descripcion" Grid.Row="0" Grid.Column="0"/>
         <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="{Binding IsReadOnlyDescripcion}" Text="{Binding Descripcion}"/>
 
-        <DataGrid SelectedItem="{Binding SelectTipoCategoria}" ItemsSource="{Binding Categorias}" Grid.Row="1" Grid.ColumnSpan ="2">
+        <DataGrid SelectedItem="{Binding SelectCategoria}" ItemsSource="{Binding Categorias}" Grid.Row="1" Grid.ColumnSpan ="2">
         </DataGrid>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <Button IsEnabled="{Binding IsEnabledAdd}" Content="Add" Command="{Binding Instancia}" CommandParameter="Add"/>
-            <Button IsEnabled="{Binding IsEnabledDelete}" Content="Delete" Command="{Binding Instancia}" CommandParameter="Delete"/>
-            <Button IsEnabled="{Binding IsEnabledUpdate}" Content="Update" Command="{Binding Instancia}" CommandParameter="Update"/>
-            <Button IsEnabled="{Binding IsEnabledSave}" Content="Save" Command="{Binding Instancia}" CommandParameter="Save"/>
-            <Button IsEnabled="{Binding IsEnabledCancel}" Content="Cancel" Command="{Binding Instancia}" CommandParameter="Cancel"/>
+            <Button IsEnabled="{Binding IsEnabledAdd}" Content="Add" Command="{Binding Instancia}" CommandParameter="Add" Width="auto"/>
+            <Button IsEnabled="{Binding IsEnabledDelete}" Content="Delete" Command="{Binding Instancia}" CommandParameter="Delete" Width="auto"/>
+            <Button IsEnabled="{Binding IsEnabledUpdate}" Content="Update" Command="{Binding Instancia}" CommandParameter="Update" Width="auto"/>
+            <Button IsEnabled="{Binding IsEnabledSave}" Content="Save" Command="{Binding Instancia}" CommandParameter="Save" Width="auto"/>
+            <Button IsEnabled="{Binding IsEnabledCancel}" Content="Cancel" Command="{Binding Instancia}" CommandParameter="Cancel" Width="auto"/>
         </StackPanel>
 
     </Grid>
